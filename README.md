@@ -1,4 +1,7 @@
 # Adafruit_IS31FL3731
+
+### Added work in progress support for the Scroll pHAT HD
+
 <!-- START COMPATIBILITY TABLE -->
 
 ## Compatibility

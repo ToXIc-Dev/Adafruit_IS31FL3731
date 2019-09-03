@@ -3,9 +3,11 @@
 #include <Adafruit_IS31FL3731.h>
 
 // If you're using the full breakout...
-Adafruit_IS31FL3731 matrix = Adafruit_IS31FL3731();
+//Adafruit_IS31FL3731 matrix = Adafruit_IS31FL3731();
 // If you're using the FeatherWing version
 //Adafruit_IS31FL3731_Wing matrix = Adafruit_IS31FL3731_Wing();
+// If you're using the Scroll pHAT HD
+Adafruit_IS31FL3731_ScrPhHD matrix = Adafruit_IS31FL3731_ScrPhHD();
 
 static const uint8_t PROGMEM
   smile_bmp[] =

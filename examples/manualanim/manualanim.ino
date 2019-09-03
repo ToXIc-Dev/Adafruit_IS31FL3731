@@ -3,9 +3,11 @@
 #include <Adafruit_IS31FL3731.h>
 
 // If you're using the full breakout...
-Adafruit_IS31FL3731 ledmatrix = Adafruit_IS31FL3731();
+//Adafruit_IS31FL3731 matrix = Adafruit_IS31FL3731();
 // If you're using the FeatherWing version
-//Adafruit_IS31FL3731_Wing ledmatrix = Adafruit_IS31FL3731_Wing();
+//Adafruit_IS31FL3731_Wing matrix = Adafruit_IS31FL3731_Wing();
+// If you're using the Scroll pHAT HD
+Adafruit_IS31FL3731_ScrPhHD matrix = Adafruit_IS31FL3731_ScrPhHD();
 
 void setup() {
 
