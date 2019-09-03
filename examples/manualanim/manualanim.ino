@@ -13,24 +13,24 @@ void setup() {
 
   Serial.begin(9600);
   Serial.println("ISSI manual animation test");
-  if (! ledmatrix.begin()) {
+  if (! matrix.begin()) {
     Serial.println("IS31 not found");
     while (1);
   }
   Serial.println("IS31 Found!");
   
-  ledmatrix.setTextWrap(false);
-  ledmatrix.setTextColor(64); // quarter brightness
-  ledmatrix.setTextSize(1);
+  matrix.setTextWrap(false);
+  matrix.setTextColor(64); // quarter brightness
+  matrix.setTextSize(1);
 
   // fill all 8 frames with some text
   for (uint8_t frame = 0; frame < 8; frame++) {
-    ledmatrix.clear();
-    ledmatrix.setFrame(frame);
-    ledmatrix.setCursor(0,0);
-    ledmatrix.write('a'+frame*3);
-    ledmatrix.write('b'+frame*3);
-    ledmatrix.write('c'+frame*3);
+    matrix.clear();
+    matrix.setFrame(frame);
+    matrix.setCursor(0,0);
+    matrix.write('a'+frame*3);
+    matrix.write('b'+frame*3);
+    matrix.write('c'+frame*3);
   }
 }
 
@@ -39,7 +39,7 @@ int x = 0;
 void loop() {
   // display each frame for 250 milliseconds
   for (uint8_t frame = 0; frame < 8; frame++) {
-    ledmatrix.displayFrame(frame);
+    matrix.displayFrame(frame);
     delay(250);
   }
 }
