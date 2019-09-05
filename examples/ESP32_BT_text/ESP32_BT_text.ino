@@ -70,6 +70,7 @@ if (message.indexOf("br") >=0 ) {
  Brightness = b.toInt();
  message2 = "";
  Serial.println("Brightness set to: " + b);
+ SerialBT.println("Brightness set to: " + b);
  
   }  else if (message.indexOf("txt") >=0 ){
     message4 = message;
@@ -77,6 +78,7 @@ if (message.indexOf("br") >=0 ) {
     message4.trim();
     txt = message4;
     Serial.println("Display message set to: " + txt);
+    SerialBT.println("Display message set to: " + txt);
   }
 
 }
@@ -86,7 +88,7 @@ if (message.indexOf("br") >=0 ) {
   } else {
   message2 = txt;
   matrix.setRotation(0);
-  matrix.setTextSize(1);
+  matrix.setTextSize(0);
   matrix.setTextWrap(false);  // we dont want text to wrap so it scrolls nicely
   matrix.setTextColor(Brightness);
   matrix.clear();
